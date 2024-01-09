@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://b53ksbcepix8s"]
+
+[ext_resource type="Texture2D" uid="uid://b4ct10tco7xul" path="res://assets/env/MainBG.png" id="1_csqx3"]
+[ext_resource type="AudioStream" uid="uid://wpsdoxyepjl4" path="res://assets/audio/birdsong.wav" id="2_blkpb"]
+[ext_resource type="LabelSettings" uid="uid://coaxc56w0kg7o" path="res://assets/fonts/LG_72_title.tres" id="3_kktuv"]
+[ext_resource type="PackedScene" uid="uid://cnjp5mabc3c3h" path="res://scenes/level_button/level_button.tscn" id="4_rdhej"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_csqx3")
+expand_mode = 3
+
+[node name="BirdSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_blkpb")
+autoplay = true
+
+[node name="MC" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 73.0
+grow_horizontal = 2
+rotation = 0.0349066
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Label" type="Label" parent="MC"]
+layout_mode = 2
+text = "ANGRY ANIMALS"
+label_settings = ExtResource("3_kktuv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HB" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 48
+
+[node name="LevelButton" parent="HB" instance=ExtResource("4_rdhej")]
+layout_mode = 2
+
+[node name="LevelButton2" parent="HB" instance=ExtResource("4_rdhej")]
+layout_mode = 2
+level_number = 2
+
+[node name="LevelButton3" parent="HB" instance=ExtResource("4_rdhej")]
+layout_mode = 2
+level_number = 3

@@ -1,0 +1,8 @@
+res://scenes/main/main.tscn
+res://singletons/score_manager.gd
+res://singletons/signal_manager.gd
+res://scenes/animal/animal.gd
+res://scenes/level/level.tscn
+res://scenes/game_ui/game_ui.tscn
+res://scenes/game_ui/game_ui.gd
+res://scenes/animal/animal.tscn
