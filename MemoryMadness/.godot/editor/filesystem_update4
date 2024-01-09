@@ -1,0 +1,11 @@
+res://scenes/front_sprite/front_sprite.tscn
+res://assets/fonts/LG_84.tres
+res://scenes/front_sprite/front_sprite.gd
+res://scenes/master_scene/master_scene.tscn
+res://scenes/main_screen/main_screen.tscn
+res://singletons/image_manager.gd
+res://scenes/level_button/level_button.tscn
+res://scenes/level_button/level_button.gd
+res://singletons/game_manager.gd
+res://singletons/sound_manager.gd
+res://scenes/main_screen/main_screen.gd

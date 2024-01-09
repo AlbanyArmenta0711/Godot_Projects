@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://b21f3wr8vlvdu"]
+
+[ext_resource type="Texture2D" uid="uid://bucr47oqi2wrv" path="res://assets/ui/level_select_frame_128.png" id="1_065e3"]
+[ext_resource type="Texture2D" uid="uid://crnunyb6tlsxw" path="res://assets/ui/level_select_frame_hover_128.png" id="2_d06l2"]
+[ext_resource type="Script" path="res://scenes/level_button/level_button.gd" id="2_hxhxg"]
+[ext_resource type="LabelSettings" uid="uid://d0h2f2n6ixkb8" path="res://assets/fonts/WH_32.tres" id="3_cwj6w"]
+
+[node name="LevelButton" type="TextureButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(64, 64)
+texture_normal = ExtResource("1_065e3")
+texture_hover = ExtResource("2_d06l2")
+script = ExtResource("2_hxhxg")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0x0"
+label_settings = ExtResource("3_cwj6w")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
